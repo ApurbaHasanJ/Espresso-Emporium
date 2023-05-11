@@ -27,7 +27,7 @@ const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/coffee/${_id}`, {
+        fetch(`https://espresso-emporium-apurbahasanj.vercel.app/coffee/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -70,10 +70,18 @@ const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
       </div>
 
       <div className=" flex w-1/12 flex-col gap-3 justify-center">
+
+        {/* review */}
+        <Link to={`/review-coffee/${_id}`}>
         <AiFillEye className="text-white text-5xl hover:border-2 rounded-lg hover:border-[#331A15] hover:text-[#331A15] p-2 bg-[#D2B48C]" />
+        </Link>
+
+        {/* Update */}
         <Link to={`/update-coffee/${_id}`}>
           <MdModeEdit className="text-white text-5xl hover:border-2 hover:border-[#331A15] hover:text-[#331A15] rounded-lg p-2 bg-[#3C393B]" />
         </Link>
+
+        {/* delete */}
         <MdDelete
           onClick={() => handleDeleteCoffee(_id)}
           className="text-white text-5xl hover:border-2 hover:border-[#331A15] hover:text-[#331A15] rounded-lg p-2 bg-[#EA4744]"
