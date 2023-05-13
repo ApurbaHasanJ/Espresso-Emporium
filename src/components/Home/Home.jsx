@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const Home = () => {
   const loadedCoffees = useLoaderData();
-  const [coffees, setCoffees] = useState(loadedCoffees);
+  const [coffees, setCoffees] = useState(Array.isArray(loadedCoffees) ? loadedCoffees : []);
   console.log();
   return (
     <div>
