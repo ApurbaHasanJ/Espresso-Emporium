@@ -9,6 +9,7 @@ ESPRESSO EMPORIUM is a Coffee Shop Admin website that allows administrators to m
 - Tailwind CSS: A utility-first CSS framework for styling
 - DaisyUI: A plugin for extending Tailwind CSS with additional components and utilities
 - Firebase Authentication: A service for user authentication and authorization
+- MongoDB: A NoSQL database used for CRUD operations to manage coffee items and their details in the Coffee Shop Admin website.
 - Node.js: A runtime environment for executing JavaScript on the server-side
 - Express.js: A web application framework for Node.js
 - Sweet Alert: A JavaScript library for creating beautiful and customizable alerts
